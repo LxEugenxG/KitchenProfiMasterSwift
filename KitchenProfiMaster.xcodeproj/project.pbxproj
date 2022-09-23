@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C42C40928DDA986006F66F0 /* IngDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */; };
 		4C5A72A828D4962D002C2482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72A728D4962D002C2482 /* AppDelegate.swift */; };
 		4C5A72AA28D4962D002C2482 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72A928D4962D002C2482 /* SceneDelegate.swift */; };
 		4C5A72AC28D4962D002C2482 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72AB28D4962D002C2482 /* ViewController.swift */; };
 		4C5A72AF28D4962D002C2482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5A72AD28D4962D002C2482 /* Main.storyboard */; };
 		4C5A72B128D4962D002C2482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C5A72B028D4962D002C2482 /* Assets.xcassets */; };
 		4C5A72B428D4962D002C2482 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5A72B228D4962D002C2482 /* LaunchScreen.storyboard */; };
+		4C5A72BC28D4A2D0002C2482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */; };
+		4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */; };
+		4C7FBE8528DDA4A100097D81 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7FBE8328DDA4A100097D81 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngDetailCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4C5A72A428D4962D002C2482 /* KitchenProfiMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitchenProfiMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5A72A728D4962D002C2482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C5A72A928D4962D002C2482 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		4C5A72B028D4962D002C2482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C5A72B328D4962D002C2482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C5A72B528D4962D002C2482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIngredientsCVCController.swift; sourceTree = "<group>"; };
+		4C7FBE8428DDA4A100097D81 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		4C5A72A628D4962D002C2482 /* KitchenProfiMaster */ = {
 			isa = PBXGroup;
 			children = (
+				4C7FBE8828DDA86D00097D81 /* Ingredients */,
 				4C5A72A728D4962D002C2482 /* AppDelegate.swift */,
 				4C5A72A928D4962D002C2482 /* SceneDelegate.swift */,
+				4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */,
 				4C5A72AB28D4962D002C2482 /* ViewController.swift */,
 				4C5A72AD28D4962D002C2482 /* Main.storyboard */,
 				4C5A72B028D4962D002C2482 /* Assets.xcassets */,
 				4C5A72B228D4962D002C2482 /* LaunchScreen.storyboard */,
 				4C5A72B528D4962D002C2482 /* Info.plist */,
+				4C7FBE8328DDA4A100097D81 /* Model.xcdatamodeld */,
 			);
 			path = KitchenProfiMaster;
+			sourceTree = "<group>";
+		};
+		4C7FBE8828DDA86D00097D81 /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */,
+				4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */,
+			);
+			path = Ingredients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C42C40928DDA986006F66F0 /* IngDetailCollectionViewCell.swift in Sources */,
+				4C5A72BC28D4A2D0002C2482 /* LoginViewController.swift in Sources */,
 				4C5A72AC28D4962D002C2482 /* ViewController.swift in Sources */,
 				4C5A72A828D4962D002C2482 /* AppDelegate.swift in Sources */,
 				4C5A72AA28D4962D002C2482 /* SceneDelegate.swift in Sources */,
+				4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */,
+				4C7FBE8528DDA4A100097D81 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +380,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C7FBE8328DDA4A100097D81 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C7FBE8428DDA4A100097D81 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4C7FBE8428DDA4A100097D81 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C5A729C28D4962C002C2482 /* Project object */;
 }
