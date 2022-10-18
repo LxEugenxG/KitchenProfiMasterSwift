@@ -12,11 +12,22 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    @IBOutlet weak var errorLable: UILabel!
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+       setUpElements()
+    }
+    func setUpElements(){
+        errorLable.alpha = 0
+        
+        Utilities.styleTextField(username)
+        Utilities.styleTextField(password)
+        Utilities.styleFilledButton(loginBtn)
     }
     
     
@@ -36,6 +47,18 @@ class LoginViewController: UIViewController {
  // Get the new view controller using segue.destination.
  // Pass the selected object to the new view controller.
  }
+ 
+ 
+ 
+ 
+ 
  */
 
 
+func isPasswordValid(_ password : String) -> Bool {
+    let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+    return passwordTest.evaluate(with: password)
+    
+    
+    
+}

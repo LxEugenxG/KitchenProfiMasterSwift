@@ -17,6 +17,9 @@
 		4C5A72BC28D4A2D0002C2482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */; };
 		4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */; };
 		4C7FBE8528DDA4A100097D81 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7FBE8328DDA4A100097D81 /* Model.xcdatamodeld */; };
+		4CA5430B28FD5503004189E7 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5430A28FD5503004189E7 /* RegistViewController.swift */; };
+		4CA5430F28FEA588004189E7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5430E28FEA588004189E7 /* Utilities.swift */; };
+		4CA5431228FEB989004189E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CA5431128FEB988004189E7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIngredientsCVCController.swift; sourceTree = "<group>"; };
 		4C7FBE8428DDA4A100097D81 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4CA5430A28FD5503004189E7 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistViewController.swift; path = KitchenProfiMaster/Regi_Login/RegistViewController.swift; sourceTree = SOURCE_ROOT; };
+		4CA5430E28FEA588004189E7 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4CA5431128FEB988004189E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +70,16 @@
 		4C5A72A628D4962D002C2482 /* KitchenProfiMaster */ = {
 			isa = PBXGroup;
 			children = (
+				4CA5431028FEA59A004189E7 /* Hilfe */,
+				4CA5430C28FD7ACF004189E7 /* Regi_Login */,
 				4C7FBE8828DDA86D00097D81 /* Ingredients */,
 				4C5A72A728D4962D002C2482 /* AppDelegate.swift */,
 				4C5A72A928D4962D002C2482 /* SceneDelegate.swift */,
-				4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */,
 				4C5A72AB28D4962D002C2482 /* ViewController.swift */,
 				4C5A72AD28D4962D002C2482 /* Main.storyboard */,
 				4C5A72B028D4962D002C2482 /* Assets.xcassets */,
 				4C5A72B228D4962D002C2482 /* LaunchScreen.storyboard */,
+				4CA5431128FEB988004189E7 /* GoogleService-Info.plist */,
 				4C5A72B528D4962D002C2482 /* Info.plist */,
 				4C7FBE8328DDA4A100097D81 /* Model.xcdatamodeld */,
 			);
@@ -85,6 +93,23 @@
 				4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */,
 			);
 			path = Ingredients;
+			sourceTree = "<group>";
+		};
+		4CA5430C28FD7ACF004189E7 /* Regi_Login */ = {
+			isa = PBXGroup;
+			children = (
+				4CA5430A28FD5503004189E7 /* RegistViewController.swift */,
+				4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */,
+			);
+			path = Regi_Login;
+			sourceTree = "<group>";
+		};
+		4CA5431028FEA59A004189E7 /* Hilfe */ = {
+			isa = PBXGroup;
+			children = (
+				4CA5430E28FEA588004189E7 /* Utilities.swift */,
+			);
+			path = Hilfe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 4C5A729B28D4962C002C2482;
+			packageReferences = (
+				4CA5431328FEBFBD004189E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4C5A72A528D4962D002C2482 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5A72B428D4962D002C2482 /* LaunchScreen.storyboard in Resources */,
+				4CA5431228FEB989004189E7 /* GoogleService-Info.plist in Resources */,
 				4C5A72B128D4962D002C2482 /* Assets.xcassets in Resources */,
 				4C5A72AF28D4962D002C2482 /* Main.storyboard in Resources */,
 			);
@@ -160,9 +189,11 @@
 			files = (
 				4C42C40928DDA986006F66F0 /* IngDetailCollectionViewCell.swift in Sources */,
 				4C5A72BC28D4A2D0002C2482 /* LoginViewController.swift in Sources */,
+				4CA5430B28FD5503004189E7 /* RegistViewController.swift in Sources */,
 				4C5A72AC28D4962D002C2482 /* ViewController.swift in Sources */,
 				4C5A72A828D4962D002C2482 /* AppDelegate.swift in Sources */,
 				4C5A72AA28D4962D002C2482 /* SceneDelegate.swift in Sources */,
+				4CA5430F28FEA588004189E7 /* Utilities.swift in Sources */,
 				4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */,
 				4C7FBE8528DDA4A100097D81 /* Model.xcdatamodeld in Sources */,
 			);
@@ -380,6 +411,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CA5431328FEBFBD004189E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		4C7FBE8328DDA4A100097D81 /* Model.xcdatamodeld */ = {

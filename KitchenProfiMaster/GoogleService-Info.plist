@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>991270068092-peui2r2s39ktv1uu3t7gll2f3kvd6its.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.991270068092-peui2r2s39ktv1uu3t7gll2f3kvd6its</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBow5Md0jGCmDXFJa9zEHstx25j08z_BHo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>991270068092</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Eugen.Ganske.KitchenProfiMaster</string>
+	<key>PROJECT_ID</key>
+	<string>kitchen-profi-ios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kitchen-profi-ios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:991270068092:ios:c8f6682660b1b32e18cef9</string>
+</dict>
+</plist>
