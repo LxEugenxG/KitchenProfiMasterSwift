@@ -6,39 +6,73 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import FirebaseCore
+import FirebaseFirestore
+
 
 class LoginViewController: UIViewController {
+    
+    //@IBOutlet weak var username: UIImageView!
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    @IBOutlet weak var errorLable: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
-    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setUpElements()
+        setUpElements()
+        
     }
+    
+    
     func setUpElements(){
-        errorLable.alpha = 0
+        
+        errorLabel.alpha = 0
+        
         
         Utilities.styleTextField(username)
         Utilities.styleTextField(password)
-        Utilities.styleFilledButton(loginBtn)
+        Utilities.styleFilledButton(loginButton)
+        
     }
     
     
-    @IBAction func logInBtn(_ sender: Any) {
-        performSegue(withIdentifier: "addIngredients", sender: self)
-        NotificationCenter.default.post(name: NSNotification.Name.init("Login"), object: username)
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        
+        let email = username.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().signIn(withEmail: email, password: password) {
+            (result, error) in
+            
+            if error != nil {
+                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.alpha = 1
+            }
+            else {
+                
+                let ingriedentsCV = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.AddIngredientsCVC) as?
+                 AddIngredientsCVC
+                 
+                self.view.window?.rootViewController = ingriedentsCV
+                self.view.window?.makeKeyAndVisible()
+            }
+        }
+        
     }
-    
-    
     
 }
+
+
+
 /*
  // MARK: - Navigation
  
@@ -53,12 +87,3 @@ class LoginViewController: UIViewController {
  
  
  */
-
-
-func isPasswordValid(_ password : String) -> Bool {
-    let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-    return passwordTest.evaluate(with: password)
-    
-    
-    
-}
