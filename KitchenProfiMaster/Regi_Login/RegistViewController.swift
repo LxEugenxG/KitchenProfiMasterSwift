@@ -25,6 +25,9 @@ class RegistViewController: UIViewController {
     @IBOutlet weak var regiButton: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,8 +59,13 @@ class RegistViewController: UIViewController {
         }
         let cleanedPassword = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        let cleanedPasswordRep = passordRep.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         if Utilities.isPasswordValid(cleanedPassword) == false {
-            return "Bitte stellen Sie sicher, dass Ihr Passwort mindestens 8 Zeichen lang ist, ein Sonderzeichen und eine Zahl enthält."
+            return "Bitte stellen Sie sicher, dass Ihr Passwort muss mindestens 8 Zeichen lang ist, ein Sonderzeichen und eine Zahl enthält."
+        }
+        if cleanedPassword != cleanedPasswordRep{
+            return "Passwörter stimmen nicht überein"
         }
         
         return nil
@@ -78,11 +86,10 @@ class RegistViewController: UIViewController {
             let email = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
             let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
+    
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil{
-                    self.showError("Error creating user")
-                    print(err)
+                    self.showError("E-Mail Adresse existiert bereits")
                 }
                 else {
                     let db = Firestore.firestore()

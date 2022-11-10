@@ -31,7 +31,7 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ingredientCell", for: indexPath) as! IngDetailCollectionViewCell
 
-        cell.ingImageView.image = UIImage(named: "apple")
+        cell.labelIngredients.text = ""
         cell.contentView.layer.cornerRadius = 64
         return cell
     }
@@ -47,4 +47,40 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
     }
     */
 
+    
+    @IBAction func addBtnIngredients(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Kontakt Hinzufügen", message: "", preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.text = ""
+        }
+
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0].text
+            
+            if textField != nil {
+                
+                _ = URL(string: "https://api.spoonacular.com/food/ingredients/search?query=" + textField! + "&number=2&sort=calories&sortDirection=desc&apiKey=dd14833cfbf344aea8f14968f6961b14")
+                
+            }
+            
+            
+            
+            // Force unwrapping because we know it exists.
+            //self.list.append(textField!.text!)
+            self.ingredientsCV.reloadData()
+        }))
+
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
 }
+

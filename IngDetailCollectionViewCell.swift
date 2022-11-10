@@ -10,7 +10,9 @@ import UIKit
 class IngDetailCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var ingImageView: UIImageView!
+
+    @IBOutlet weak var labelIngredients: UILabel!
+    
     
     
 }
