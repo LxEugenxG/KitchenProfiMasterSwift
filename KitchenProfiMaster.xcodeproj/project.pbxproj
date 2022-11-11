@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C42C40928DDA986006F66F0 /* IngDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */; };
+		4C430586291D3F6B006A9DF8 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C430585291D3F6B006A9DF8 /* ApiKey.swift */; };
+		4C430589291D409E006A9DF8 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C430588291D409E006A9DF8 /* ApiClient.swift */; };
+		4C43058B291E4EB2006A9DF8 /* IngStruc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43058A291E4EB2006A9DF8 /* IngStruc.swift */; };
 		4C5A72A828D4962D002C2482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72A728D4962D002C2482 /* AppDelegate.swift */; };
 		4C5A72AA28D4962D002C2482 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72A928D4962D002C2482 /* SceneDelegate.swift */; };
 		4C5A72AC28D4962D002C2482 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72AB28D4962D002C2482 /* ViewController.swift */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngDetailCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		4C430585291D3F6B006A9DF8 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		4C430588291D409E006A9DF8 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		4C43058A291E4EB2006A9DF8 /* IngStruc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngStruc.swift; sourceTree = "<group>"; };
 		4C5A72A428D4962D002C2482 /* KitchenProfiMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitchenProfiMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5A72A728D4962D002C2482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C5A72A928D4962D002C2482 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C430587291D4071006A9DF8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4C430585291D3F6B006A9DF8 /* ApiKey.swift */,
+				4C430588291D409E006A9DF8 /* ApiClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		4C5A729B28D4962C002C2482 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +95,7 @@
 		4C5A72A628D4962D002C2482 /* KitchenProfiMaster */ = {
 			isa = PBXGroup;
 			children = (
+				4C430587291D4071006A9DF8 /* API */,
 				4C6ADDDF2900BF89002042BF /* Media */,
 				4CA5431028FEA59A004189E7 /* Hilfe */,
 				4CA5430C28FD7ACF004189E7 /* Regi_Login */,
@@ -128,6 +144,7 @@
 			children = (
 				4CA5430E28FEA588004189E7 /* Utilities.swift */,
 				4C964271290006EA001700C3 /* Constants.swift */,
+				4C43058A291E4EB2006A9DF8 /* IngStruc.swift */,
 			);
 			path = Hilfe;
 			sourceTree = "<group>";
@@ -217,10 +234,13 @@
 				4C5A72BC28D4A2D0002C2482 /* LoginViewController.swift in Sources */,
 				4CA5430B28FD5503004189E7 /* RegistViewController.swift in Sources */,
 				4C5A72AC28D4962D002C2482 /* ViewController.swift in Sources */,
+				4C430586291D3F6B006A9DF8 /* ApiKey.swift in Sources */,
 				4C5A72A828D4962D002C2482 /* AppDelegate.swift in Sources */,
 				4C964272290006EA001700C3 /* Constants.swift in Sources */,
 				4C5A72AA28D4962D002C2482 /* SceneDelegate.swift in Sources */,
 				4CA5430F28FEA588004189E7 /* Utilities.swift in Sources */,
+				4C430589291D409E006A9DF8 /* ApiClient.swift in Sources */,
+				4C43058B291E4EB2006A9DF8 /* IngStruc.swift in Sources */,
 				4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */,
 				4C7FBE8528DDA4A100097D81 /* Model.xcdatamodeld in Sources */,
 			);

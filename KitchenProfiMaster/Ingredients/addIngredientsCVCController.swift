@@ -11,6 +11,10 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
     
     
     
+    let apiClient = ApiClient()
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +54,10 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
     
     @IBAction func addBtnIngredients(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Kontakt Hinzufügen", message: "", preferredStyle: .alert)
+        let apiClient = ApiClient()
+        
+        
+        let alert = UIAlertController(title: "zutat Hinzufügen", message: "", preferredStyle: .alert)
 
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
@@ -63,7 +70,14 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
             
             if textField != nil {
                 
-                _ = URL(string: "https://api.spoonacular.com/food/ingredients/search?query=" + textField! + "&number=2&sort=calories&sortDirection=desc&apiKey=dd14833cfbf344aea8f14968f6961b14")
+                apiClient.getIngredients(query: textField!){ result in
+                    print(result.results)
+                    DispatchQueue.main.async {
+                        
+                        
+                        
+                    }
+                }
                 
             }
             
