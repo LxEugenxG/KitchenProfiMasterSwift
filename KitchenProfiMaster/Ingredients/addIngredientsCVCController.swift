@@ -7,38 +7,58 @@
 
 import UIKit
 
-class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate{
+class AddIngredientsCVC: UIViewController, UITableViewDelegate,UITableViewDataSource{
     
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ingredients.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
+       
+        var content = cell.defaultContentConfiguration()
+        content.text = ingredients[indexPath.row].name
+       
+        cell.contentView.layer.cornerRadius = 64
+        cell.contentConfiguration = content
+        return cell
+    }
+    
+    
+    @IBOutlet weak var tableIngridens: UITableView!
     
     
     let apiClient = ApiClient()
     
-    
+    // leerer array
+    var ingredients = [IngredientStruct]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ingredientsCV.delegate = self
-        ingredientsCV.dataSource = self
+        tableIngridens.delegate = self
+        tableIngridens.dataSource = self
 
         // Do any additional setup after loading the view.
     }
 
 
-    @IBOutlet weak var ingredientsCV: UICollectionView!
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ingredientCell", for: indexPath) as! IngDetailCollectionViewCell
-
-        cell.labelIngredients.text = ""
-        cell.contentView.layer.cornerRadius = 64
-        return cell
-    }
+//    @IBOutlet weak var ingredientsCV: UICollectionView!
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return ingredients.count
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ingredientCell", for: indexPath) as! IngDetailCollectionViewCell
+//
+//        cell.labelIngredients.text = ""
+//        cell.contentView.layer.cornerRadius = 64
+//        return cell
+//    }
     
 
     /*
@@ -73,8 +93,11 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
                 apiClient.getIngredients(query: textField!){ result in
                     print(result.results)
                     DispatchQueue.main.async {
+                        if let ingredient = result.results.first{
+                            self.ingredients.append(result.results.first!)
+                        }
                         
-                        
+                        self.tableIngridens.reloadData()
                         
                     }
                 }
@@ -85,7 +108,7 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
             
             // Force unwrapping because we know it exists.
             //self.list.append(textField!.text!)
-            self.ingredientsCV.reloadData()
+            
         }))
 
         // 4. Present the alert.
@@ -93,6 +116,16 @@ class AddIngredientsCVC: UIViewController,UICollectionViewDataSource, UICollecti
         
         
     }
+    
+    @IBOutlet weak var ingredientsList: UIView!
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let showRecipesCVC = segue.destination as! ShowRecipesCVC
+        showRecipesCVC.ingredientsList = ingredients
+    }
+    
+    
     
     
     

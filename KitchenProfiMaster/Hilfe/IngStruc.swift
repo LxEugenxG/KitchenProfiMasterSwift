@@ -19,8 +19,11 @@ struct IngredientStruct: Codable {
     
     var name: String?
     var id: Int?
+    var image: String?
     
 }
+
+
 
 
 

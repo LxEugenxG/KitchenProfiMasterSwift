@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C04A92B2927A3B600B4AF7C /* ShowRecipesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04A92A2927A3B600B4AF7C /* ShowRecipesCVC.swift */; };
+		4C04A92F2927B14300B4AF7C /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04A92E2927B14200B4AF7C /* Recipes.swift */; };
 		4C42C40928DDA986006F66F0 /* IngDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */; };
 		4C430586291D3F6B006A9DF8 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C430585291D3F6B006A9DF8 /* ApiKey.swift */; };
 		4C430589291D409E006A9DF8 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C430588291D409E006A9DF8 /* ApiClient.swift */; };
@@ -28,9 +30,12 @@
 		4CA5430B28FD5503004189E7 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5430A28FD5503004189E7 /* RegistViewController.swift */; };
 		4CA5430F28FEA588004189E7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5430E28FEA588004189E7 /* Utilities.swift */; };
 		4CA5431228FEB989004189E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CA5431128FEB988004189E7 /* GoogleService-Info.plist */; };
+		4CD087472927BE3500921BC2 /* RecipesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD087462927BE3500921BC2 /* RecipesApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C04A92A2927A3B600B4AF7C /* ShowRecipesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecipesCVC.swift; sourceTree = "<group>"; };
+		4C04A92E2927B14200B4AF7C /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngDetailCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4C430585291D3F6B006A9DF8 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		4C430588291D409E006A9DF8 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		4CA5430A28FD5503004189E7 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistViewController.swift; path = KitchenProfiMaster/Regi_Login/RegistViewController.swift; sourceTree = SOURCE_ROOT; };
 		4CA5430E28FEA588004189E7 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4CA5431128FEB988004189E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4CD087462927BE3500921BC2 /* RecipesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C04A9272927A30800B4AF7C /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				4C04A92A2927A3B600B4AF7C /* ShowRecipesCVC.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
 		4C430587291D4071006A9DF8 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				4C430585291D3F6B006A9DF8 /* ApiKey.swift */,
 				4C430588291D409E006A9DF8 /* ApiClient.swift */,
+				4CD087462927BE3500921BC2 /* RecipesApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -124,6 +139,7 @@
 		4C7FBE8828DDA86D00097D81 /* Ingredients */ = {
 			isa = PBXGroup;
 			children = (
+				4C04A9272927A30800B4AF7C /* Recipes */,
 				4C42C40828DDA986006F66F0 /* IngDetailCollectionViewCell.swift */,
 				4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */,
 			);
@@ -145,6 +161,7 @@
 				4CA5430E28FEA588004189E7 /* Utilities.swift */,
 				4C964271290006EA001700C3 /* Constants.swift */,
 				4C43058A291E4EB2006A9DF8 /* IngStruc.swift */,
+				4C04A92E2927B14200B4AF7C /* Recipes.swift */,
 			);
 			path = Hilfe;
 			sourceTree = "<group>";
@@ -230,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CD087472927BE3500921BC2 /* RecipesApi.swift in Sources */,
 				4C42C40928DDA986006F66F0 /* IngDetailCollectionViewCell.swift in Sources */,
 				4C5A72BC28D4A2D0002C2482 /* LoginViewController.swift in Sources */,
 				4CA5430B28FD5503004189E7 /* RegistViewController.swift in Sources */,
@@ -238,7 +256,9 @@
 				4C5A72A828D4962D002C2482 /* AppDelegate.swift in Sources */,
 				4C964272290006EA001700C3 /* Constants.swift in Sources */,
 				4C5A72AA28D4962D002C2482 /* SceneDelegate.swift in Sources */,
+				4C04A92B2927A3B600B4AF7C /* ShowRecipesCVC.swift in Sources */,
 				4CA5430F28FEA588004189E7 /* Utilities.swift in Sources */,
+				4C04A92F2927B14300B4AF7C /* Recipes.swift in Sources */,
 				4C430589291D409E006A9DF8 /* ApiClient.swift in Sources */,
 				4C43058B291E4EB2006A9DF8 /* IngStruc.swift in Sources */,
 				4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */,
