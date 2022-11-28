@@ -10,6 +10,7 @@ import UIKit
 class ShowRecipesCVC: UIViewController {
     
     let ingredientsAPI = ApiClient()
+    let recipesAPI = RecipesApi()
     
     
     @IBOutlet weak var tabelView: UITableView!
@@ -39,14 +40,17 @@ extension ShowRecipesCVC:UITableViewDelegate, UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         content.text = ingredientsList[indexPath.row].name
         print(ingredientsList[indexPath.row].image)
-        ingredientsAPI.loadImage(image: ingredientsList[indexPath.row].image!){
+        recipesAPI.loadImage(id: ingredientsList[indexPath.row].image!){
             image in
             DispatchQueue.main.async {
                 content.image = image
+                print("wo isch bild")
+                print(image)
+                cell.contentConfiguration = content
             }
             
         }
-        cell.contentConfiguration = content
+        
     return cell
     }
 }

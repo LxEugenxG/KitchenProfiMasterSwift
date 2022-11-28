@@ -52,17 +52,14 @@ struct ApiClient {
         let url = URL(string: "https://spoonacular.com/cdn/ingredients_100x100/\(image)")
         guard url != nil else { return }
 
-        URLSession.shared.downloadTask(with: url!){
-            localurl,urlresponse,error in
-            
-            do {
-                var image = UIImage(data: try Data(contentsOf: localurl!))
+        URLSession.shared.dataTask(with: url!){
+            data, response ,error in
+            print()
+            guard let data = data, error == nil else { return }
+                var image = UIImage(data: data)
                 //let pathURL = getScreenShotDirectory() // URL
                 //let pathString = pathURL.path
                 completion(image ?? UIImage(systemName: "square.slash")!)
-            } catch {
-                print("Error creating image")
-            }
             
             
         }.resume()
