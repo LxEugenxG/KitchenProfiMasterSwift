@@ -20,6 +20,12 @@ struct IngredientStruct: Codable {
     var name: String?
     var id: Int?
     var image: String?
+    var title: String?
+    var imageType: String?
+    
+}
+
+struct imageStruc: Codable {
     
 }
 

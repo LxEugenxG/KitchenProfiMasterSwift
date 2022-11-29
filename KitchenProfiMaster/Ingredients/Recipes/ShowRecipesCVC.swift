@@ -40,7 +40,7 @@ extension ShowRecipesCVC:UITableViewDelegate, UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         content.text = ingredientsList[indexPath.row].name
         print(ingredientsList[indexPath.row].image)
-        recipesAPI.loadImage(id: ingredientsList[indexPath.row].image!){
+        recipesAPI.loadImage(id: ingredientsList[indexPath.row].id!){
             image in
             DispatchQueue.main.async {
                 content.image = image

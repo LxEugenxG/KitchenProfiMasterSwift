@@ -45,7 +45,7 @@ struct RecipesApi {
     }
     
     
-    func loadImage (id: String, completion: @escaping(UIImage) -> Void ){
+    func loadImage (id: Int, completion: @escaping(UIImage) -> Void ){
         
         
         //

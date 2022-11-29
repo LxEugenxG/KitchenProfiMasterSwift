@@ -22,6 +22,7 @@
 		4C5A72BC28D4A2D0002C2482 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */; };
 		4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */; };
 		4C6ADDE729013C7B002042BF /* KitchenProfiIntro3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4C6ADDE629013C7B002042BF /* KitchenProfiIntro3.mp4 */; };
+		4C742BDF29360B6E002BCEB8 /* recipesStruc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C742BDE29360B6D002BCEB8 /* recipesStruc.swift */; };
 		4C7FBE8528DDA4A100097D81 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C7FBE8328DDA4A100097D81 /* Model.xcdatamodeld */; };
 		4C96426C28FFECD2001700C3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4C96426B28FFECD2001700C3 /* FirebaseAnalytics */; };
 		4C96426E28FFECD2001700C3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4C96426D28FFECD2001700C3 /* FirebaseAuth */; };
@@ -51,6 +52,7 @@
 		4C5A72BB28D4A2D0002C2482 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C5A72BF28D4B4FF002C2482 /* addIngredientsCVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIngredientsCVCController.swift; sourceTree = "<group>"; };
 		4C6ADDE629013C7B002042BF /* KitchenProfiIntro3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = KitchenProfiIntro3.mp4; sourceTree = "<group>"; };
+		4C742BDE29360B6D002BCEB8 /* recipesStruc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipesStruc.swift; sourceTree = "<group>"; };
 		4C7FBE8428DDA4A100097D81 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4C964271290006EA001700C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4CA5430A28FD5503004189E7 /* RegistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistViewController.swift; path = KitchenProfiMaster/Regi_Login/RegistViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -162,6 +164,7 @@
 				4C964271290006EA001700C3 /* Constants.swift */,
 				4C43058A291E4EB2006A9DF8 /* IngStruc.swift */,
 				4C04A92E2927B14200B4AF7C /* Recipes.swift */,
+				4C742BDE29360B6D002BCEB8 /* recipesStruc.swift */,
 			);
 			path = Hilfe;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				4C43058B291E4EB2006A9DF8 /* IngStruc.swift in Sources */,
 				4C5A72C028D4B4FF002C2482 /* addIngredientsCVCController.swift in Sources */,
 				4C7FBE8528DDA4A100097D81 /* Model.xcdatamodeld in Sources */,
+				4C742BDF29360B6E002BCEB8 /* recipesStruc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
