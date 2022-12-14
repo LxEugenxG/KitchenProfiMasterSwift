@@ -17,7 +17,7 @@ Rezepte werden dann entsprechend der hinzugefügten zutaten gefiltert (spoonacul
 ![Simulator Screen Shot - iPhone 14 Pro - 2022-12-14 at 01 33 05](https://user-images.githubusercontent.com/99252056/207477967-ffa252d6-49a3-416e-b739-cb446d301b95.png)
 
 
-#Rezept zutaten liste
+# Rezept zutaten liste
 im einzelnen rezepten werden noch mal die zutaten mit menge angaben angezeigt (spoonacular API)
 
 ![Simulator Screen Shot - iPhone 14 Pro - 2022-12-14 at 01 33 17](https://user-images.githubusercontent.com/99252056/207478018-2eb49d69-d30d-40d5-af8c-7456ab02e84f.png)
